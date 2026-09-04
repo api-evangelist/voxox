@@ -1,0 +1,80 @@
+generated: '2026-09-04'
+method: probed
+source: live probes of https://voxox.com and https://www.voxox.com
+summary: No well-known document is served. voxox.com is parked at GoDaddy (window.LANDER_SYSTEM="PW",
+  parking-lander assets on img1.wsimg.com, ns19/ns20.domaincontrol.com) and its catch-all answers HTTP
+  200 with a 114-byte JavaScript redirect stub for every /.well-known/* path. Every 200 below is that
+  shell, not a document, so no WellKnown / SecurityTxt / AgentCard pointer is emitted.
+hosts:
+- host: voxox.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+- host: www.voxox.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: HTML parking-lander shell, not a document — registrar catch-all answers 200 for every path
+notes:
+- 'robots.txt (200) and sitemap.xml (200) are served with real content, but both are GoDaddy parking boilerplate:
+  the sitemap contains exactly one URL, https://voxox.com/lander.'
+- 'https://voxox.com/llms.txt returns 200 with robots.txt syntax ("User-agent: * / Allow: / / Disallow-Training:
+  /"), which is the same registrar parking template rather than an llms.txt-format document authored by
+  the provider. No LLMsTxt pointer is emitted.'
+- No developer, docs, api, support, assist, my, app, portal, sms or cloudphone subdomain of voxox.com
+  resolves in DNS as of 2026-09-04.
+- 'Related domains probed 2026-09-04: voxox.net returns the identical 114-byte GoDaddy parking stub; voxox.ai
+  is listed for sale at $9,888 on the Spaceship.com domain marketplace; telcentris.com (the company''s
+  original corporate domain) now 302s to an unrelated third-party site; getvoxox.com and voxoxcloud.com
+  are NXDOMAIN.'
